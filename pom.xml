@@ -5,8 +5,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.4.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>2.5.3</version>
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>tn.esprit</groupId>
 	<artifactId>ExamThourayaS2</artifactId>
@@ -117,6 +117,17 @@
 		</plugins>
 	</build>
 	
-	
+	<distributionManagement>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://192.168.1.20:8081/repository/maven-snapshots</url>
+            <layout>default</layout>
+        </snapshotRepository>
+        <repository>
+            <id>maven-releases</id>
+            <url>http://192.168.1.20:8081/repository/maven-releases</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
 
 </project>
