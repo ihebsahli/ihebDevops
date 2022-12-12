@@ -2,6 +2,14 @@ pipeline {
     agent any
     
     stages {
+    stage('Git Checkout') {
+      steps {
+        echo 'pulling...';
+         git branch:'main',
+         url : 'https://github.com/ihebsahli/ihebDevops.git';
+         }
+        }
+        
         stage('clean') {
             steps {
                 sh 'mvn clean'
